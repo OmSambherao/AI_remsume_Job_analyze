@@ -33,6 +33,6 @@ authRouter.get("/logout", authController.logoutUserController);
  * @access private 
  */
 
-authRouter.get("/get-me", authMiddleware.verifyToken, authController.getMeController)
+authRouter.get("/get-me", authMiddleware, authController.getMeController)
 
 module.exports = authRouter;
